@@ -26,8 +26,8 @@ Redux
 
 ## FEATURES
 
-Delete movie \
+Delete movie
 
-Like & dislike button \
+Like & dislike button
 
 Filter by category
