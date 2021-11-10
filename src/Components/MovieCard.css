@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;0,500;0,600;1,100;1,400&display=swap");
+
+.cardContainer {
+  margin-top: 4%;
+  max-width: min-content;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+.cardHeader {
+  position: relative;
+}
+.cardHeader:hover .deleteSection {
+  transform: translateX(-0px);
+}
+.deleteSection {
+  align-self: center;
+  position: absolute;
+  top: 5%;
+  fill: #d32f2f;
+  width: 8%;
+  text-align: center;
+  padding: 5%;
+  background-color: rgb(18, 16, 43);
+  border-radius: 0% 50% 50% 0%;
+  transform: translateX(-80px);
+  transition: transform 0.5s ease-in-out;
+}
+.deleteSection svg {
+  transition: transform 0.2s ease-in-out;
+}
+.deleteSection svg:hover {
+  transform: scale(1.1);
+}
+.deleteSection svg:active {
+  transform: scale(1.5);
+}
+.cardTitle {
+  margin-top: 2%;
+  font-family: "Montserrat";
+  font-weight: 700;
+  color: #fafafa;
+  transition: all 0.2s ease-in-out;
+  margin-left: 2%;
+}
+.cardTitle:hover {
+  color: #d32f2f;
+}
+.cardCategory {
+  color: #fbbc05;
+}
+.cardCategory {
+  margin-top: 2%;
+}
+.rateSection {
+  margin-left: 2%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  color: #fbbc05;
+  display: flex;
+  gap: 5%;
+  align-content: center;
+  display: flex;
+  align-items: center;
+}
+.rateSection svg {
+  fill: #fbbc05;
+  transition: all 0.2s ease-in-out;
+}
+.rateSection svg:hover {
+  transform: scale(1.1);
+}
+.rateSection svg:active {
+  transform: scale(1.5);
+}
+.rateRatio {
+  height: 5px;
+  width: 100%;
+  display: flex;
+}

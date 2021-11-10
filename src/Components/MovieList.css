@@ -1,0 +1,103 @@
+.movieListContainer {
+  display: flex;
+}
+.rightSection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.PagesNavigation {
+  margin-top: 5%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  gap: 3%;
+}
+.PagesNavigation button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  color: white;
+  fill: white;
+  background-color: #d32f2f;
+  padding: 1%;
+  font-weight: 900;
+  width: 20px;
+  height: 20px;
+  transition: all 0.2s ease-in-out;
+}
+.PagesNavigation button:hover {
+  color: #d32f2f;
+  fill: #d32f2f;
+  background-color: white;
+}
+.movileList {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2%;
+  width: 70vw;
+  margin: auto;
+}
+.filterTitle {
+  color: #d32f2f;
+  border-bottom: #d32f2f 3px solid;
+
+  width: 40%;
+}
+.filterSection {
+  position: fixed;
+  top: 30vh;
+  margin-left: 2%;
+  color: #fafafa;
+  width: 500px;
+}
+.checkContainer {
+  margin-top: 5%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  width: 60%;
+}
+.checkBoxSelect {
+  width: 40px;
+}
+.checkBoxLabel {
+  width: 100%;
+  font-size: 1.1em;
+}
+.noData {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+
+  height: 100vh;
+}
+.noData h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: rgb(250, 250, 250, 0.5);
+  border: rgb(250, 250, 250, 0.5) solid 2px;
+  padding: 10%;
+}
+.reload {
+  margin-top: 5%;
+  fill: rgb(250, 250, 250, 0.5);
+  cursor: pointer;
+}
+.reload svg {
+  transition: all 0.2s ease-in-out;
+}
+.reload svg:hover {
+  transform: scale(1.2);
+  fill: white;
+}
+.reload svg:active {
+  transform: scale(1.5);
+  opacity: 0.3;
+  fill: white;
+}
