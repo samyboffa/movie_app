@@ -11,16 +11,16 @@ whatsapp : +216 54 857 558
 
 # TECH USED
 
-## ReactJS
+### ReactJS
 
-## Style: Pure CSS
+### Style: Pure CSS
 
-## Data Management : Redux
+### Data Management : Redux
 
 # FEATURES
 
-## Delete movie
+### Delete movie
 
-## Like & dislike button
+### Like & dislike button
 
-## Filter by category
+### Filter by category
