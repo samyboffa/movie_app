@@ -15,7 +15,6 @@ export const moviesReducer = (state = initialState, action) => {
           categories.push(movie.category);
         }
       });
-      console.log(categories);
       return {
         ...state,
         movies: action.payload,

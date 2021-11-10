@@ -12,7 +12,7 @@ import image8 from "../images/seven.jpg";
 import image9 from "../images/inception.jpg";
 import image10 from "../images/goneGirl.jpg";
 import "./MovieList.css";
-import { next, previous, reload } from "../svg/svg";
+import { goTop, menu, next, previous, reload } from "../svg/svg";
 import { getMovies } from "../Redux/actions/movies";
 
 export const MovieList = () => {
@@ -21,25 +21,24 @@ export const MovieList = () => {
   const [showOnly, setshowOnly] = useState([]);
   const [eltPerPage, seteltPerPage] = useState(4);
   const [currentPage, setcurrentPage] = useState(0);
+  const [menuOpened, setmenuOpened] = useState(false);
   let pageNumber = [];
-  const [filteredMovies, setfilteredMovies] = useState([]);
+  let filteredMovies = [];
   const numberOfPages = () => {
-    setfilteredMovies([]);
+    filteredMovies = [];
     let sum = 0;
     if (showOnly.length) {
       movies.forEach((movie) => {
         showOnly.forEach((category) => {
           if (movie.category === category) {
             sum++;
-            setfilteredMovies([...filteredMovies, movies]);
+            filteredMovies.push(movie);
           }
         });
       });
-      console.log(sum);
-
       return Math.ceil(sum / eltPerPage);
     } else {
-      setfilteredMovies(movies);
+      filteredMovies = movies;
       return Math.ceil(movies.length / eltPerPage);
     }
   };
@@ -82,6 +81,7 @@ export const MovieList = () => {
   });
 
   const handleChange = (e) => {
+    setcurrentPage(0);
     if (e.target.checked) {
       setshowOnly([...showOnly, e.target.name]);
     } else {
@@ -105,7 +105,21 @@ export const MovieList = () => {
 
   return (
     <div className="movieListContainer">
-      <div className="filterSection">
+      <a href="#openMenu">
+        <button className="goTop">{goTop}</button>
+      </a>
+      <button
+        id="openMenu"
+        className="openMenu"
+        onClick={() =>
+          menuOpened ? setmenuOpened(false) : setmenuOpened(true)
+        }
+      >
+        {menu}
+      </button>
+      <div
+        className={menuOpened ? "filterSection menuOpened" : "filterSection "}
+      >
         <h3 className="filterTitle">FILTER</h3>
         <form>
           {categories?.map((category, index) => (
@@ -126,37 +140,36 @@ export const MovieList = () => {
         <h3 className="filterTitle">SHOW PER PAGE</h3>
         <form>
           <select
+            className="pagination"
             name="pagination"
             id="pagination"
             onChange={(e) => handlePagination(e)}
           >
-            <option value={4}>4</option>
-            <option value={8}>8</option>
-            <option value={12}>12</option>
+            <option className="options" value={4}>
+              4
+            </option>
+            <option className="options" value={8}>
+              8
+            </option>
+            <option className="options" value={12}>
+              12
+            </option>
           </select>
         </form>
       </div>
       <div className="rightSection">
-        <div className="PagesNavigation">
+        <div className="PagesNavigation" id="PagesNavigation">
           <button onClick={handlePrevious}>{previous}</button>
           {pageNumber}
           <button onClick={handleNext}>{next}</button>
         </div>
         <div className="movileList">
-          {movies.length ? (
-            movies.map((movie, index) =>
-              showOnly.length ? (
-                showOnly.map((category) =>
-                  category === movie.category ? (
-                    index < eltPerPage * (currentPage + 1) &&
-                    index >= currentPage * eltPerPage ? (
-                      <MovieCard movie={movie} images={images} key={index} />
-                    ) : null
-                  ) : null
-                )
-              ) : (
+          {filteredMovies.length ? (
+            filteredMovies.map((movie, index) =>
+              index < eltPerPage * (currentPage + 1) &&
+              index >= currentPage * eltPerPage ? (
                 <MovieCard movie={movie} images={images} key={index} />
-              )
+              ) : null
             )
           ) : (
             <div className="noData">

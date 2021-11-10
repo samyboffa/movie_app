@@ -1,5 +1,6 @@
 .movieListContainer {
   display: flex;
+  flex-direction: column;
 }
 .rightSection {
   width: 100%;
@@ -43,9 +44,22 @@
 .filterTitle {
   color: #d32f2f;
   border-bottom: #d32f2f 3px solid;
-
+  margin-top: 10%;
   width: 40%;
 }
+.pagination {
+  margin-top: 2%;
+  background: none;
+  width: 40%;
+  outline: none;
+  border: none;
+  color: #fafafa;
+  font-size: 1.2em;
+}
+.pagination:active {
+  background-color: #12102b;
+}
+
 .filterSection {
   position: fixed;
   top: 30vh;
@@ -100,4 +114,64 @@
   transform: scale(1.5);
   opacity: 0.3;
   fill: white;
+}
+.goTop,
+.openMenu {
+  display: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .filterSection {
+    top: 0;
+    width: 40%;
+    transform: translateX(-150%);
+    height: 100vh;
+    z-index: 2;
+    background-color: rgb(18, 16, 43, 0.9);
+    transition: all 0.2s ease-in-out;
+  }
+  .menuOpened {
+    transform: translateX(0%);
+  }
+  .checkContainer,
+  .filterTitle,
+  .pagination {
+    width: 90%;
+  }
+  .checkBoxSelect {
+    width: 60%;
+  }
+  .goTop {
+    display: block;
+    position: fixed;
+    top: 95vh;
+    left: 90vw;
+    outline: none;
+    background-color: #d32f2f;
+    border: #d32f2f;
+    width: 30px;
+    height: 30px;
+    fill: white;
+  }
+  .goTop svg {
+    fill: #fff;
+  }
+  .goTop:hover {
+    background-color: #fff;
+  }
+  .goTop:hover svg {
+    fill: #d32f2f;
+  }
+  .openMenu {
+    display: block;
+    fill: #d32f2f;
+    background: none;
+    outline: none;
+    border: none;
+  }
+  .openMenu:hover {
+    fill: #fff;
+  }
 }
