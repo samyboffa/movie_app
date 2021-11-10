@@ -1,26 +1,33 @@
-# DESCRIPTION
+## DESCRIPTION
 
-Static movie app
+Static movie app .\
 Total time spent : 8h
 
-# CREATED BY
+## CREATED BY
 
-author : SAMY GHARSALLAH
-mail : samygharsallah@hotmail.com
-whatsapp : +216 54 857 558
+### Author
 
-# TECH USED
+SAMY GHARSALLAH .\
+mail : samygharsallah@hotmail.com .\
+whatsapp : +216 54 857 558 .\
+linkedin : www.linkedin.com/in/samighdevweb .\
+
+## TECH USED
 
 ### ReactJS
 
-### Style: Pure CSS
+### Style
 
-### Data Management : Redux
+Pure CSS
 
-# FEATURES
+### Data Management
 
-### Delete movie
+Redux
 
-### Like & dislike button
+## FEATURES
 
-### Filter by category
+Delete movie .\
+
+Like & dislike button .\
+
+Filter by category .\
