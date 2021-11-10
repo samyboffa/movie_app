@@ -80,3 +80,10 @@
   width: 100%;
   display: flex;
 }
+
+@media (max-width: 768px) {
+  .cardImage {
+    width: 70vw;
+    height: auto;
+  }
+}
