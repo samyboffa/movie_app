@@ -7,10 +7,10 @@ Total time spent : 8h
 
 ### Author
 
-SAMY GHARSALLAH .\
-mail : samygharsallah@hotmail.com .\
-whatsapp : +216 54 857 558 .\
-linkedin : www.linkedin.com/in/samighdevweb .\
+SAMY GHARSALLAH \
+mail : samygharsallah@hotmail.com \
+whatsapp : +216 54 857 558 \
+linkedin : www.linkedin.com/in/samighdevweb
 
 ## TECH USED
 
@@ -26,8 +26,8 @@ Redux
 
 ## FEATURES
 
-Delete movie .\
+Delete movie \
 
-Like & dislike button .\
+Like & dislike button \
 
-Filter by category .\
+Filter by category
